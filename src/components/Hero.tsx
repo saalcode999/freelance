@@ -13,7 +13,7 @@ export default function Hero() {
             {firm.tagline}
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            {firm.attorneyName} represents individuals, families, and business
+            {firm.name} represents individuals, families, and business
             owners across North Texas, handling each case with the attention
             it deserves and the honesty to tell you where you stand.
           </p>

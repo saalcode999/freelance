@@ -16,10 +16,10 @@ export default function Header() {
           />
           <span className="flex flex-col">
             <span className="font-display text-lg text-ink md:text-xl">
-              {firm.attorneyName}
+              {firm.shortName}
             </span>
             <span className="text-[0.7rem] uppercase tracking-[0.16em] text-steel">
-              {firm.title} at Law
+              PLLC
             </span>
           </span>
         </Link>

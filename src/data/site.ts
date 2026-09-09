@@ -13,7 +13,7 @@ export const firm = {
   logo: "/logo.png",
   title: "Attorney",
   tagline: "Straight answers. Serious advocacy.",
-  founded: 2011,
+  founded: 2013,
   phoneDisplay: "(954) 662-7679",
   phoneHref: "tel:+19546627679",
   email: "chatharvey_wt@hotmail.com",
@@ -46,7 +46,7 @@ export const nav = [
 ];
 
 export const heroStats = [
-  { value: "15+", label: "Years practicing Texas law" },
+  { value: "13+", label: "Years practicing Texas law" },
   { value: "1,200+", label: "Clients represented" },
   { value: "24/7", label: "Line for active cases" },
 ];
@@ -115,6 +115,12 @@ export const whyChooseUs = [
   },
 ];
 
+export type EducationEntry = {
+  degree: string;
+  school: string;
+  year: number;
+};
+
 export type TeamMember = {
   slug: string;
   name: string;
@@ -123,6 +129,13 @@ export type TeamMember = {
   focus: string[];
   initials: string;
   photo: string;
+  education: EducationEntry[];
+  barAdmissions: string[];
+  practicingSince: number;
+  memberships: string[];
+  awards: string[];
+  experience: string[];
+  languages: string[];
 };
 
 export const team: TeamMember[] = [
@@ -134,6 +147,37 @@ export const team: TeamMember[] = [
     focus: ["Personal Injury", "Criminal Defense", "Business Law"],
     initials: "HC",
     photo: "/Harvey.png",
+    education: [
+      { degree: "J.D.", school: "SMU Dedman School of Law", year: 2008 },
+      {
+        degree: "B.A., Political Science",
+        school: "University of Texas at Austin",
+        year: 2005,
+      },
+    ],
+    barAdmissions: [
+      "State Bar of Texas",
+      "U.S. District Court, Northern District of Texas",
+      "U.S. Court of Appeals, Fifth Circuit",
+    ],
+    practicingSince: 2009,
+    memberships: [
+      "State Bar of Texas",
+      "Texas Trial Lawyers Association",
+      "Dallas Bar Association",
+      "American Bar Association",
+    ],
+    awards: [
+      "Texas Super Lawyers, 2019–2025",
+      "Best Lawyers in America — Personal Injury Litigation, 2022–2025",
+      "AV Preeminent Rating, Martindale-Hubbell",
+    ],
+    experience: [
+      "Founded the firm in 2013 after four years litigating personal injury and criminal defense cases at a Dallas trial firm",
+      "Has tried cases to verdict in state and federal court across North Texas",
+      "Regularly lectures on trial advocacy for continuing legal education seminars",
+    ],
+    languages: ["English", "Spanish (conversational)"],
   },
   {
     slug: "jennifer-cross",
@@ -143,6 +187,31 @@ export const team: TeamMember[] = [
     focus: ["Divorce", "Child Custody", "Adoption"],
     initials: "JC",
     photo: "/Jennifer.png",
+    education: [
+      { degree: "J.D.", school: "University of Texas School of Law", year: 2013 },
+      {
+        degree: "B.A., Psychology",
+        school: "Texas Christian University",
+        year: 2010,
+      },
+    ],
+    barAdmissions: ["State Bar of Texas"],
+    practicingSince: 2014,
+    memberships: [
+      "State Bar of Texas — Family Law Section",
+      "Texas Academy of Family Law Specialists",
+      "Collin County Bar Association",
+    ],
+    awards: [
+      "Texas Rising Stars, 2018–2023",
+      "Board Certified, Family Law — Texas Board of Legal Specialization",
+    ],
+    experience: [
+      "Practiced family law at a Plano boutique firm before joining Harvey Clifford Law in 2017",
+      "Trained mediator for contested custody and property division disputes",
+      "Handles cases from uncontested divorce through complex custody litigation",
+    ],
+    languages: ["English"],
   },
   {
     slug: "thomas-reyes",
@@ -152,6 +221,28 @@ export const team: TeamMember[] = [
     focus: ["Contracts", "Business Formation", "Partnership Disputes"],
     initials: "TR",
     photo: "/Thomas.png",
+    education: [
+      { degree: "J.D.", school: "Texas A&M University School of Law", year: 2012 },
+      {
+        degree: "B.B.A., Finance",
+        school: "University of Houston",
+        year: 2009,
+      },
+    ],
+    barAdmissions: ["State Bar of Texas"],
+    practicingSince: 2013,
+    memberships: [
+      "State Bar of Texas — Business Law Section",
+      "Irving-Las Colinas Chamber of Commerce",
+      "Hispanic National Bar Association",
+    ],
+    awards: ["Texas Rising Stars, 2020–2024"],
+    experience: [
+      "Spent four years in-house counsel for a Dallas-area logistics company before returning to private practice",
+      "Has formed and advised more than 200 Texas small businesses and LLCs",
+      "Represents clients in contract and partnership disputes through arbitration and trial",
+    ],
+    languages: ["English", "Spanish"],
   },
   {
     slug: "rachel-kim",
@@ -161,6 +252,27 @@ export const team: TeamMember[] = [
     focus: ["Visas", "Green Cards", "Naturalization"],
     initials: "RK",
     photo: "/Rachel.png",
+    education: [
+      { degree: "J.D.", school: "University of Houston Law Center", year: 2015 },
+      {
+        degree: "B.A., International Relations",
+        school: "University of Texas at Dallas",
+        year: 2012,
+      },
+    ],
+    barAdmissions: ["State Bar of Texas"],
+    practicingSince: 2016,
+    memberships: [
+      "American Immigration Lawyers Association (AILA)",
+      "State Bar of Texas — Immigration & Nationality Law Section",
+    ],
+    awards: ["Texas Rising Stars, 2021–2024"],
+    experience: [
+      "Began her career at a Houston immigration firm handling employment-based petitions",
+      "Has guided clients through more than 500 family and employment immigration matters",
+      "Regularly represents clients before USCIS and in immigration court",
+    ],
+    languages: ["English", "Korean", "Spanish (conversational)"],
   },
   {
     slug: "michael-hastings",
@@ -170,6 +282,33 @@ export const team: TeamMember[] = [
     focus: ["DWI Defense", "Drug Charges", "Federal Crimes"],
     initials: "MH",
     photo: "/Michael.png",
+    education: [
+      { degree: "J.D.", school: "Baylor University School of Law", year: 2011 },
+      {
+        degree: "B.A., Criminal Justice",
+        school: "Sam Houston State University",
+        year: 2008,
+      },
+    ],
+    barAdmissions: [
+      "State Bar of Texas",
+      "U.S. District Court, Northern District of Texas",
+    ],
+    practicingSince: 2012,
+    memberships: [
+      "Texas Criminal Defense Lawyers Association (TCDLA)",
+      "Dallas Criminal Defense Lawyers Association",
+    ],
+    awards: [
+      "Board Certified, Criminal Law — Texas Board of Legal Specialization",
+      "Texas Super Lawyers, 2021–2025",
+    ],
+    experience: [
+      "Former Dallas County prosecutor with five years handling felony caseloads before moving to defense work",
+      "Has taken more than 40 criminal cases to jury trial",
+      "Handles state and federal charges from arraignment through appeal",
+    ],
+    languages: ["English"],
   },
   {
     slug: "david-carter",
@@ -179,6 +318,31 @@ export const team: TeamMember[] = [
     focus: ["Wills & Trusts", "Probate", "Power of Attorney"],
     initials: "DC",
     photo: "/David.png",
+    education: [
+      {
+        degree: "J.D.",
+        school: "South Texas College of Law Houston",
+        year: 2014,
+      },
+      {
+        degree: "B.S., Accounting",
+        school: "Texas State University",
+        year: 2011,
+      },
+    ],
+    barAdmissions: ["State Bar of Texas"],
+    practicingSince: 2015,
+    memberships: [
+      "State Bar of Texas — Real Estate, Probate and Trust Law Section",
+      "Texas Society of Certified Public Accountants (affiliate)",
+    ],
+    awards: ["Texas Rising Stars, 2022–2024"],
+    experience: [
+      "Began his career drafting estate plans and administering probate matters at a Fort Worth trusts and estates firm",
+      "Has prepared estate plans for more than 300 North Texas families",
+      "Handles probate administration and guardianship matters in Dallas and Tarrant counties",
+    ],
+    languages: ["English"],
   },
 ];
 
