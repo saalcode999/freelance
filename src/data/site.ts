@@ -6,7 +6,7 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 export const firm = {
-  name: "Harvey Clifford, Attorney at Law",
+  name: "Harvey Clifford Law, PLLC",
   shortName: "Harvey Clifford Law",
   attorneyName: "Harvey Clifford",
   attorneyPhoto: "/Harvey.png",
