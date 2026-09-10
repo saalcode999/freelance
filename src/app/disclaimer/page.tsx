@@ -13,15 +13,15 @@ export default function DisclaimerPage() {
     <>
       <Header />
       <main className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24">
-        <p className="text-sm uppercase tracking-[0.16em] text-brass">Legal</p>
-        <h1 className="mt-3 font-display text-3xl leading-tight text-ink md:text-4xl">
+        <p className="text-base uppercase tracking-[0.16em] text-brass">Legal</p>
+        <h1 className="mt-3 font-display text-4xl leading-tight text-ink md:text-5xl">
           Disclaimer
         </h1>
-        <p className="mt-4 text-sm text-steel">Last updated September 2026</p>
+        <p className="mt-4 text-base text-steel">Last updated September 2026</p>
 
-        <div className="mt-10 space-y-8 text-sm leading-relaxed text-ink-soft">
+        <div className="mt-10 space-y-8 text-lg leading-relaxed text-ink-soft">
           <section>
-            <h2 className="font-display text-xl text-ink">No Attorney-Client Relationship</h2>
+            <h2 className="font-display text-2xl text-ink">No Attorney-Client Relationship</h2>
             <p className="mt-2">
               Use of this website, including submitting the contact form or
               emailing {firm.name}, does not create an attorney-client
@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Not Legal Advice</h2>
+            <h2 className="font-display text-2xl text-ink">Not Legal Advice</h2>
             <p className="mt-2">
               The content on this website, including attorney biographies,
               practice area descriptions, and blog or resource pages, is
@@ -45,7 +45,7 @@ export default function DisclaimerPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Prior Results</h2>
+            <h2 className="font-display text-2xl text-ink">Prior Results</h2>
             <p className="mt-2">
               Any results described on this website, including client
               testimonials, reflect the outcomes of specific matters. Prior
@@ -55,7 +55,7 @@ export default function DisclaimerPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Attorney Advertising</h2>
+            <h2 className="font-display text-2xl text-ink">Attorney Advertising</h2>
             <p className="mt-2">
               This website may be considered attorney advertising under the
               rules of the State Bar of Texas. {firm.name} is licensed to
@@ -67,7 +67,7 @@ export default function DisclaimerPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Contact</h2>
+            <h2 className="font-display text-2xl text-ink">Contact</h2>
             <p className="mt-2">
               Questions about this disclaimer can be directed to {firm.name}{" "}
               at{" "}

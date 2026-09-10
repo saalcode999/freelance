@@ -13,15 +13,15 @@ export default function PrivacyPolicyPage() {
     <>
       <Header />
       <main className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24">
-        <p className="text-sm uppercase tracking-[0.16em] text-brass">Legal</p>
-        <h1 className="mt-3 font-display text-3xl leading-tight text-ink md:text-4xl">
+        <p className="text-base uppercase tracking-[0.16em] text-brass">Legal</p>
+        <h1 className="mt-3 font-display text-4xl leading-tight text-ink md:text-5xl">
           Privacy Policy
         </h1>
-        <p className="mt-4 text-sm text-steel">Last updated September 2026</p>
+        <p className="mt-4 text-base text-steel">Last updated September 2026</p>
 
-        <div className="mt-10 space-y-8 text-sm leading-relaxed text-ink-soft">
+        <div className="mt-10 space-y-8 text-lg leading-relaxed text-ink-soft">
           <section>
-            <h2 className="font-display text-xl text-ink">Information We Collect</h2>
+            <h2 className="font-display text-2xl text-ink">Information We Collect</h2>
             <p className="mt-2">
               When you submit the contact form on this website, we collect
               the information you provide, such as your name, email address,
@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">How We Use Information</h2>
+            <h2 className="font-display text-2xl text-ink">How We Use Information</h2>
             <p className="mt-2">
               We use the information you submit to respond to your inquiry,
               evaluate whether we can assist with your matter, and, if you
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Cookies</h2>
+            <h2 className="font-display text-2xl text-ink">Cookies</h2>
             <p className="mt-2">
               This website may use cookies or similar technologies to
               support basic site functionality and understand how visitors
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Data Security</h2>
+            <h2 className="font-display text-2xl text-ink">Data Security</h2>
             <p className="mt-2">
               We take reasonable measures to protect information submitted
               through this website. No method of transmission over the
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Third-Party Links</h2>
+            <h2 className="font-display text-2xl text-ink">Third-Party Links</h2>
             <p className="mt-2">
               This website may link to third-party sites, including social
               media platforms. We are not responsible for the privacy
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Your Choices</h2>
+            <h2 className="font-display text-2xl text-ink">Your Choices</h2>
             <p className="mt-2">
               You may request that we delete information you have submitted
               through this website by contacting us using the information
@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="font-display text-xl text-ink">Contact</h2>
+            <h2 className="font-display text-2xl text-ink">Contact</h2>
             <p className="mt-2">
               Questions about this privacy policy can be directed to{" "}
               {firm.name} at{" "}
