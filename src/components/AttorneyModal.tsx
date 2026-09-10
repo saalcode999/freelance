@@ -18,10 +18,10 @@ function Section({
 }) {
   return (
     <div className="border-t border-line pt-5 first:border-t-0 first:pt-0">
-      <p className="text-xs font-medium uppercase tracking-[0.16em] text-brass">
+      <p className="text-sm font-medium uppercase tracking-[0.16em] text-brass">
         {title}
       </p>
-      <div className="mt-2 text-sm leading-relaxed text-ink-soft">
+      <div className="mt-2 text-base leading-relaxed text-ink-soft">
         {children}
       </div>
     </div>
@@ -55,11 +55,11 @@ export default function AttorneyModal({ member, onClose }: AttorneyModalProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="attorney-modal-name"
-      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/70 px-4 py-8 backdrop-blur-sm md:items-center md:py-12"
+      className="animate-backdrop-in fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/70 px-4 py-8 backdrop-blur-sm md:items-center md:py-12"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl border border-line bg-paper shadow-2xl"
+        className="animate-modal-in relative w-full max-w-3xl border border-line bg-paper shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -88,12 +88,12 @@ export default function AttorneyModal({ member, onClose }: AttorneyModalProps) {
           <div className="max-h-[70vh] overflow-y-auto p-6 md:col-span-8 md:max-h-[85vh] md:p-10">
             <p
               id="attorney-modal-name"
-              className="font-display text-2xl text-ink md:text-3xl"
+              className="font-display text-3xl text-ink md:text-4xl"
             >
               {member.name}
             </p>
-            <p className="mt-1 text-sm text-brass">{member.role}</p>
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-1 text-base text-brass">{member.role}</p>
+            <p className="mt-4 text-base leading-relaxed text-ink-soft">
               {member.bio}
             </p>
 

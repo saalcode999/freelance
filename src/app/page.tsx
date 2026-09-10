@@ -3,8 +3,9 @@ import Hero from "@/components/Hero";
 import PracticeAreas from "@/components/PracticeAreas";
 import About from "@/components/About";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import CaseResults from "@/components/CaseResults";
 import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
+import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,8 +18,9 @@ export default function Home() {
         <PracticeAreas />
         <About />
         <WhyChooseUs />
+        <CaseResults />
         <Team />
-        <Testimonials />
+        <Reviews />
         <Contact />
       </main>
       <Footer />

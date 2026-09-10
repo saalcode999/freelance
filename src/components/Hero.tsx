@@ -1,91 +1,65 @@
 import { firm, heroStats } from "@/data/site";
-import Photo from "./Photo";
+import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section className="border-b border-line">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-12 md:gap-8 md:px-10 md:py-24">
-        <div className="md:col-span-7">
-          <p className="text-sm uppercase tracking-[0.16em] text-brass">
+    <section className="relative isolate flex min-h-[85vh] items-center overflow-hidden">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/videoanim.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+      <div className="absolute inset-0 bg-ink/75" />
+
+      <div className="relative mx-auto max-w-4xl px-6 py-24 text-center md:px-10 md:py-32">
+        <Reveal>
+          <p className="text-base uppercase tracking-[0.16em] text-brass-light">
             {firm.address.city}, {firm.address.stateAbbr} · Attorney at Law
           </p>
-          <h1 className="mt-4 max-w-xl font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-6xl">
+          <h1 className="mx-auto mt-4 max-w-2xl font-display text-5xl leading-[1.1] text-paper sm:text-6xl md:text-7xl">
             {firm.tagline}
           </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            {firm.name} represents individuals, families, and business
-            owners across North Texas, handling each case with the attention
-            it deserves and the honesty to tell you where you stand.
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-paper/80">
+            <strong className="font-semibold text-paper">{firm.name}</strong>{" "}
+            represents individuals, families, and business owners across
+            North Texas, handling each case with the attention it deserves
+            and the honesty to tell you where you stand.
           </p>
+        </Reveal>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href={firm.phoneHref}
-              className="border border-ink bg-ink px-6 py-3 text-sm font-medium text-paper transition-colors hover:border-brass hover:bg-brass"
-            >
-              Call {firm.phoneDisplay}
-            </a>
-            <a
-              href="#contact"
-              className="border border-ink px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-brass hover:text-brass"
-            >
-              Schedule a Consultation
-            </a>
-          </div>
+        <Reveal delay={150} className="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href={firm.phoneHref}
+            className="border border-paper bg-paper px-6 py-3 text-base font-medium text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-brass hover:bg-brass hover:text-paper"
+          >
+            Call {firm.phoneDisplay}
+          </a>
+          <a
+            href="#contact"
+            className="border border-paper px-6 py-3 text-base font-medium text-paper transition-all duration-300 hover:-translate-y-0.5 hover:border-brass-light hover:text-brass-light"
+          >
+            Schedule a Consultation
+          </a>
+        </Reveal>
 
-          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-6">
+        <Reveal delay={300}>
+          <dl className="mx-auto mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-paper/20 pt-6">
             {heroStats.map((stat) => (
               <div key={stat.label}>
                 <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-display text-2xl text-ink">
+                <dd className="font-display text-3xl text-paper">
                   {stat.value}
                 </dd>
-                <dd className="mt-1 text-xs leading-snug text-steel">
+                <dd className="mt-1 text-sm leading-snug text-paper/60">
                   {stat.label}
                 </dd>
               </div>
             ))}
           </dl>
-        </div>
-
-        <div className="md:col-span-5">
-          <div className="relative">
-            <Photo
-              src={firm.attorneyPhoto}
-              alt={`${firm.attorneyName}, ${firm.title}`}
-              ratio="portrait"
-            />
-            <div className="border border-t-0 border-line bg-paper p-6">
-              <p className="font-display text-lg text-ink">
-                {firm.attorneyName}
-              </p>
-              <p className="text-sm text-steel">Founding {firm.title}</p>
-              <div className="mt-4 space-y-1 text-sm text-ink-soft">
-                <p>{firm.address.line1}</p>
-                <p>
-                  {firm.address.city}, {firm.address.stateAbbr}{" "}
-                  {firm.address.zip}
-                </p>
-                <p>{firm.address.country}</p>
-              </div>
-              <div className="mt-4 space-y-1 border-t border-line pt-4 text-sm">
-                <p>
-                  <a href={firm.phoneHref} className="text-ink hover:text-brass">
-                    {firm.phoneDisplay}
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href={`mailto:${firm.email}`}
-                    className="text-ink hover:text-brass break-all"
-                  >
-                    {firm.email}
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

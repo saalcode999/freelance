@@ -41,7 +41,9 @@ export const nav = [
   { label: "Home", href: "/" },
   { label: "About", href: "#about" },
   { label: "Practice Areas", href: "#practice-areas" },
+  { label: "Case Results", href: "#case-results" },
   { label: "Our Team", href: "#team" },
+  { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -142,7 +144,7 @@ export const team: TeamMember[] = [
   {
     slug: "harvey-clifford",
     name: "Harvey Clifford",
-    role: "Founding Attorney",
+    role: "Attorney — Estate Planning & Probate",
     bio: "Harvey founded the firm to give clients in North Texas the kind of attention larger firms can't offer — direct communication and a plan built around your goals, not a docket.",
     focus: ["Personal Injury", "Criminal Defense", "Business Law"],
     initials: "HC",
@@ -182,7 +184,7 @@ export const team: TeamMember[] = [
   {
     slug: "jennifer-cross",
     name: "Jennifer Cross",
-    role: "Associate Attorney — Family Law",
+    role: "Attorney — Family Law",
     bio: "Jennifer guides clients through divorce and custody matters with a calm, organized approach to a difficult process.",
     focus: ["Divorce", "Child Custody", "Adoption"],
     initials: "JC",
@@ -216,7 +218,7 @@ export const team: TeamMember[] = [
   {
     slug: "thomas-reyes",
     name: "Thomas Reyes",
-    role: "Associate Attorney — Business Law",
+    role: "Attorney — Business Law",
     bio: "Thomas works with small business owners on formation, contracts, and the disputes that come with running a company.",
     focus: ["Contracts", "Business Formation", "Partnership Disputes"],
     initials: "TR",
@@ -247,7 +249,7 @@ export const team: TeamMember[] = [
   {
     slug: "rachel-kim",
     name: "Rachel Kim",
-    role: "Associate Attorney — Immigration",
+    role: "Attorney — Immigration",
     bio: "Rachel handles family- and employment-based immigration cases, keeping clients informed at every stage of a long process.",
     focus: ["Visas", "Green Cards", "Naturalization"],
     initials: "RK",
@@ -277,7 +279,7 @@ export const team: TeamMember[] = [
   {
     slug: "michael-hastings",
     name: "Michael Hastings",
-    role: "Associate Attorney — Criminal Defense",
+    role: "Attorney — Criminal Defense",
     bio: "Michael builds defense strategy for clients facing state and federal charges, from arraignment through trial.",
     focus: ["DWI Defense", "Drug Charges", "Federal Crimes"],
     initials: "MH",
@@ -313,7 +315,7 @@ export const team: TeamMember[] = [
   {
     slug: "david-carter",
     name: "David Carter",
-    role: "Associate Attorney — Estate Planning",
+    role: "Attorney — Estate Planning",
     bio: "David drafts wills, trusts, and probate filings that hold up when a family needs them most.",
     focus: ["Wills & Trusts", "Probate", "Power of Attorney"],
     initials: "DC",
@@ -346,24 +348,85 @@ export const team: TeamMember[] = [
   },
 ];
 
-export const testimonials = [
+export const reviewStats = {
+  average: 4.9,
+  count: 187,
+  source: "Google Reviews",
+};
+
+export const reviews = [
   {
     quote:
       "Harvey walked me through every step of my case and never made me feel like just another file. I always knew what was happening and why.",
     name: "R. Alvarez",
     context: "Personal Injury client",
+    rating: 5,
   },
   {
     quote:
       "Jennifer was patient with me through a custody case that could have gone very badly. She fought hard and kept me calm the whole way through.",
     name: "K. Simmons",
     context: "Family Law client",
+    rating: 5,
   },
   {
     quote:
       "Thomas set up our LLC and caught two issues in a supplier contract that would have cost us later. Worth every dollar.",
     name: "T. Whitmore",
     context: "Business Law client",
+    rating: 5,
+  },
+];
+
+export type CaseResult = {
+  amount: string;
+  title: string;
+  summary: string;
+  practiceArea: string;
+};
+
+export const caseResults: CaseResult[] = [
+  {
+    amount: "$1.4M",
+    title: "Auto Accident Settlement",
+    summary:
+      "Recovered for a client injured by a distracted driver on I-635, after the insurer's initial offer covered less than a third of medical costs.",
+    practiceArea: "Personal Injury",
+  },
+  {
+    amount: "Not Guilty",
+    title: "DWI Jury Trial",
+    summary:
+      "Secured a full acquittal at trial after challenging the reliability of the arresting officer's field sobriety testing.",
+    practiceArea: "Criminal Defense",
+  },
+  {
+    amount: "$850K",
+    title: "Workplace Injury Settlement",
+    summary:
+      "Negotiated a settlement for a warehouse worker injured by unsafe equipment, covering lost wages and ongoing care.",
+    practiceArea: "Personal Injury",
+  },
+  {
+    amount: "Case Dismissed",
+    title: "Federal Drug Charges",
+    summary:
+      "Won a motion to suppress evidence from an unlawful search, leading the U.S. Attorney's office to dismiss the case.",
+    practiceArea: "Criminal Defense",
+  },
+  {
+    amount: "$600K",
+    title: "Premises Liability Settlement",
+    summary:
+      "Resolved a slip-and-fall claim against a commercial property owner who failed to address a known hazard.",
+    practiceArea: "Personal Injury",
+  },
+  {
+    amount: "Full Custody Awarded",
+    title: "Contested Custody Trial",
+    summary:
+      "Secured sole managing conservatorship for a client after a contested trial involving the other parent's history of instability.",
+    practiceArea: "Family Law",
   },
 ];
 
