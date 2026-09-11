@@ -14,7 +14,7 @@ export const firm = {
   title: "Attorney",
   tagline: "Straight answers. Serious advocacy.",
   founded: 2013,
-  phoneDisplay: "(954) 662-7679",
+  phoneDisplay: "(214) 493-2802",
   phoneHref: "tel:+19546627679",
   email: "chatharvey_wt@hotmail.com",
   address: {
